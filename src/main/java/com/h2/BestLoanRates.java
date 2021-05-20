@@ -25,12 +25,9 @@ public class BestLoanRates {
     }
 
     public static float getRates(int loanTermInYears) {
-
-        for (Map.Entry<Integer, Float> entry : bestRates.entrySet()) {
             if (bestRates.containsKey(loanTermInYears)) {
-                return entry.getValue();
+                return bestRates.get(loanTermInYears);
             }
-        }
         return 0.0f;
     }
 }
